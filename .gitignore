@@ -19,6 +19,10 @@ build/
 # clion user settings
 .idea/
 
+# visual studio default output directory
+out/
+.vs/
+
 # cache files
 *.cache
 .cache/
