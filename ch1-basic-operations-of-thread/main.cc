@@ -14,11 +14,13 @@ class MyThread {
   MyThread(const MyThread& other) {
     std::cout << "copy construct function" << std::endl;
     // print this pointer
+    this->ref_ = other.ref_;
     std::cout << "this pointer: " << this << std::endl;
   }
-  MyThread(MyThread&& other) {
+  MyThread(MyThread&& other) noexcept {
     std::cout << "move construct function" << std::endl;
     // print this pointer
+    this->ref_ = other.ref_;
     std::cout << "this pointer: " << this << std::endl;
   }
   // MyThread(int& r) : ref_(r) { std::cout << "ref function" << std::endl; }  // one bug-prone method
@@ -31,7 +33,7 @@ class MyThread {
     std::cout << "my thread end" << std::endl;
   }
 
-  //  private:
+ private:
   //   int& ref_;  // one bug-prone member
   int ref_ = 10;
 };
