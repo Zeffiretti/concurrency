@@ -17,3 +17,6 @@ target_link_libraries(${PROJECT_NAME}_node ${CMAKE_THREAD_LIBS_INIT})
 
 add_subdirectory(ch1-basic-operations-of-thread)
 add_subdirectory(ch2-pass-arguments-to-thread)
+add_subdirectory(ch3-multi-threads)
+add_subdirectory(ch4-mutex)
+add_subdirectory(ch5-unique-lock)

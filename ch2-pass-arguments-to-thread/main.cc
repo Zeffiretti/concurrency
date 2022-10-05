@@ -29,6 +29,10 @@ class MThreadTest {
   MThreadTest(const MThreadTest& other) : m_i(other.m_i) {
     std::cout << "MThreadTest copy construct function." << this << " " << std::this_thread::get_id() << std::endl;
   }
+  // move constructor
+  MThreadTest(MThreadTest&& other) : m_i(other.m_i) {
+    std::cout << "MThreadTest move construct function." << this << " " << std::this_thread::get_id() << std::endl;
+  }
   ~MThreadTest() {
     std::cout << "MThreadTest destruct function." << this << " " << std::this_thread::get_id() << std::endl;
   }
