@@ -1,10 +1,12 @@
+#ifndef CH5_UNIQUE_LOCK_NET_SERVER
+#define CH5_UNIQUE_LOCK_NET_SERVER
 #ifndef CH5_MULTI_THREADS_NET_SERVER
-#define CH5_MULTI_THREADS_NET_SERVER
-#include <iostream>
-#include <list>
-#include <mutex>
-#include <thread>
-#include <vector>
+#  define CH5_MULTI_THREADS_NET_SERVER
+#  include <iostream>
+#  include <list>
+#  include <mutex>
+#  include <thread>
+#  include <vector>
 
 // Demo of multi-threading with network server
 // one thread: collect player commands (std::list)
@@ -102,3 +104,5 @@ class NetServer {
 };
 
 #endif /* CH5_MULTI_THREADS_NET_SERVER */
+
+#endif /* CH5_UNIQUE_LOCK_NET_SERVER */
